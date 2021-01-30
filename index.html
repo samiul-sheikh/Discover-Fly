@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
@@ -28,7 +30,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
-        <div class="booking-form">
+        <div id="booking" class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -41,7 +43,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -49,31 +51,38 @@
                 </div>
             </div>
             <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
+                <label for="">First Class ($ <span id="firstPrice">150</span> )</label>
+                <div class="input-group">
+                    <input id="first-number" class="inp-style inp-width form-control" type="number" value="1" name="">
+                    <div class="plus-minus-btn">
+                        <button onclick="priceUpdate('first',true)" class="btn btn-default"><i
+                                class="fas fa-plus"></i></button>
+                        <button onclick="priceUpdate('first', false)" class="btn btn-default"><i
+                                class="fas fa-minus"></i></button>
+                    </div>
                 </div>
             </div>
-            
+
             <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                <label for="">Economy ($ <span id=economyPrice>100</span> )</label>
+                <div class="input-group">
+                    <input id="economy-number" class="inp-style inp-width form-control" type="number" value="1" name="">
+                    <div class="plus-minus-btn">
+                        <button onclick="priceUpdate('economy', true)" class="btn btn-default"><i
+                                class="fas fa-plus"></i></button>
+                        <button onclick="priceUpdate('economy' ,false)" class="btn btn-default"><i
+                                class="fas fa-minus"></i></button>
+                    </div>
                 </div>
             </div>
+
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$ <span id="cost">350</span></p>
                     </div>
                 </div>
 
@@ -82,7 +91,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p>$ <span id="vat">25</span></p>
                     </div>
                 </div>
                 <hr>
@@ -91,7 +100,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p>$ <span id="total">375</span> </p>
                     </div>
                 </div>
             </div>
@@ -100,16 +109,15 @@
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>When travelling the world, you will live beautiful, weird, unique and other experiences you would not believe.</p>
+            <p>When travelling the world, you will live beautiful, weird, unique and other experiences you would not
+                believe.</p>
         </div>
+        </section>
 
-        <!-- using Javascript -->
         <script src="javascript/flight.js">
-
+            
         </script>
-    </section>
-
-    <!--Thank You-->
+        <!--Thank You-->
 </body>
 
 </html>
