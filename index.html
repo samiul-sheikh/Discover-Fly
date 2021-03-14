@@ -9,14 +9,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!--Header and Menu Section-->
+    <!--Header and Menu Section start-->
     <header class="container">
         <nav>
             <ul>
@@ -27,8 +26,9 @@
             </ul>
         </nav>
     </header>
+    <!--Header and Menu Section end-->
 
-    <!--Booking Section-->
+    <!--Booking Section start-->
     <main class="main-content container">
         <div id="booking" class="booking-form">
             <h3>Booking Flights</h3>
@@ -55,10 +55,8 @@
                 <div class="input-group">
                     <input id="first-number" class="inp-style inp-width form-control" type="number" value="1" name="">
                     <div class="plus-minus-btn">
-                        <button onclick="priceUpdate('first',true)" class="btn btn-default"><i
-                                class="fas fa-plus"></i></button>
-                        <button onclick="priceUpdate('first', false)" class="btn btn-default"><i
-                                class="fas fa-minus"></i></button>
+                        <button onclick="priceUpdate('first',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="priceUpdate('first', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
             </div>
@@ -68,10 +66,8 @@
                 <div class="input-group">
                     <input id="economy-number" class="inp-style inp-width form-control" type="number" value="1" name="">
                     <div class="plus-minus-btn">
-                        <button onclick="priceUpdate('economy', true)" class="btn btn-default"><i
-                                class="fas fa-plus"></i></button>
-                        <button onclick="priceUpdate('economy' ,false)" class="btn btn-default"><i
-                                class="fas fa-minus"></i></button>
+                        <button onclick="priceUpdate('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="priceUpdate('economy' ,false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
             </div>
@@ -106,18 +102,16 @@
             </div>
             <button class="btn-style">Book Now</button>
         </div>
+        <!--Booking Section end-->
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>When travelling the world, you will live beautiful, weird, unique and other experiences you would not
-                believe.</p>
+            <p>When travelling the world, you will live beautiful, weird, unique and other experiences you would not believe.</p>
         </div>
-        </section>
+    </main>
 
-        <script src="javascript/flight.js">
-            
-        </script>
-        <!--Thank You-->
+    <script src="javascript/flight.js"> </script>
+
 </body>
 
 </html>
